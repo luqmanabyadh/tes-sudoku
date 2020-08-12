@@ -1,0 +1,8 @@
+- implement routing
+- buat update
+- buat validate
+- buat solve
+- copy data dari redux ke local state update data di local state
+- screen home untuk isi username
+- scree game buat board
+- screen finish congrats dan username
