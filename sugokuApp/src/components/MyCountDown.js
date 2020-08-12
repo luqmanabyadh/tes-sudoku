@@ -13,6 +13,8 @@ const MyCountdown = ({ level }) => {
         return setTimerLevel(900);
       case "hard":
         return setTimerLevel(300);
+      case "random":
+        return setTimerLevel(1000);
     }
   }, [level]);
 
