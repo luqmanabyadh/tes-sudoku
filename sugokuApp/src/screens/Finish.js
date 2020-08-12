@@ -4,8 +4,6 @@ import { useDispatch } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { setDefaultStatus } from "../store/actions/boardsAction";
 
-// const windowWidth = Dimensions.get("window").width;
-
 const Finish = ({ route }) => {
   const navigation = useNavigation();
   const { userName } = route.params;
@@ -21,7 +19,7 @@ const Finish = ({ route }) => {
       <View style={styles.container}>
         <View>
           <Text style={styles.congratulate}>Congratulations</Text>
-          <Text style={styles.name}> {userName}</Text>
+          <Text style={styles.name}>{userName}</Text>
         </View>
         <View style={styles.btnNewGame}>
           <Button title="Start new game?" onPress={() => handleBackHome()} />

@@ -46,12 +46,6 @@ const Home = ({ navigation }) => {
           style={[styles.picker]}
           onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
         >
-          <Picker.Item
-            label="Select difficulties"
-            value="easy"
-            disabled
-            selected
-          />
           <Picker.Item label="Random" value="random" />
           <Picker.Item label="Easy" value="easy" />
           <Picker.Item label="Medium" value="medium" />

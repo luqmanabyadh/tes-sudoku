@@ -68,9 +68,11 @@ const Board = ({ level, userName }) => {
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.boardText(userName)}>
-          {userName} is trying to solve
-        </Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.userNameStyle}>{userName}</Text>
+          <Text style={styles.textDefault}>is Trying to solve</Text>
+          <Text style={styles.textLevel}>{level} level</Text>
+        </View>
         {stateBoards.length > 1 &&
           stateBoards.map((rows, rowIdx) => {
             return (
@@ -149,11 +151,23 @@ const styles = StyleSheet.create({
   btnValidate: {
     marginHorizontal: 5,
   },
-  boardText: (userName) => ({
+  textContainer: {
+    flexDirection: "row",
     marginVertical: 20,
+  },
+  textDefault: {
+    color: "white",
+    marginHorizontal: 8,
     fontSize: 20,
-    color: userName ? "white" : "black",
-  }),
+  },
+  userNameStyle: {
+    color: "#fbd46d",
+    fontSize: 20,
+  },
+  textLevel: {
+    color: "black",
+    fontSize: 20,
+  },
 });
 
 export default Board;
