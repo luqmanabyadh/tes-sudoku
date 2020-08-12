@@ -12,6 +12,7 @@ import {
   getBoards,
   getSolve,
   getValidate,
+  setLeaderboards
 } from "../store/actions/boardsAction";
 import { useNavigation } from "@react-navigation/native";
 
@@ -30,6 +31,7 @@ const Board = ({ level, userName }) => {
       if (status == "unsolved") {
         console.log("unsolved");
       } else if (status == "solved") {
+        dispatch(setLeaderboards(userName))
         navigation.navigate("Finish", { userName });
       } else if (status == "broken") {
         alert("Youre still wrong, please check again");

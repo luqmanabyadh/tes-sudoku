@@ -14,6 +14,10 @@ const Finish = ({ route }) => {
     navigation.navigate("Home", { userName: "" });
   };
 
+  // const handleToLeaderboards = () => {
+  //   navigation.navigate("Leaderboard");
+  // };
+
   return (
     <>
       <View style={styles.container}>
@@ -24,6 +28,12 @@ const Finish = ({ route }) => {
         <View style={styles.btnNewGame}>
           <Button title="Start new game?" onPress={() => handleBackHome()} />
         </View>
+        {/* <View style={styles.btnToLeaderBoard}>
+          <Button
+            title="Check Leaderboards"
+            onPress={() => handleToLeaderboards()}
+          />
+        </View> */}
       </View>
     </>
   );

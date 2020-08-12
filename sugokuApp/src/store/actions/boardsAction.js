@@ -76,3 +76,14 @@ export const setDefaultStatus = (status) => {
     });
   };
 };
+
+export const setLeaderboards = (userName) => {
+  return (dispatch) => {
+    dispatch({
+      type: "SET_LEADERBOARDS",
+      payload: {
+        player: userName,
+      },
+    });
+  };
+};

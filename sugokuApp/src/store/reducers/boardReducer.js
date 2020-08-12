@@ -2,6 +2,7 @@ const initiateState = {
   boards: [],
   solution: [],
   status: "",
+  leaderboards: [],
 };
 
 const boardReducer = (state = initiateState, action) => {
@@ -14,6 +15,11 @@ const boardReducer = (state = initiateState, action) => {
       return { ...state, status: action.payload.status };
     case "SET_DEFAULT_STATUS":
       return { ...state, status: action.payload.status };
+    case "SET_LEADERBOARDS":
+      return {
+        ...state,
+        leaderboards: state.leaderboards.concat(action.payload.player),
+      };
     default:
       return state;
   }
